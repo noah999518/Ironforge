@@ -3,7 +3,6 @@ const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-menu a');
 const form = document.querySelector('.contact-form');
 const formStatus = document.querySelector('.form-status');
-const wishlistButtons = document.querySelectorAll('.product-meta button');
 const revealElements = document.querySelectorAll('.reveal');
 
 document.querySelector('#year').textContent = new Date().getFullYear();
@@ -21,13 +20,6 @@ navLinks.forEach((link) => {
     navToggle.classList.remove('active');
     navToggle.setAttribute('aria-expanded', 'false');
     navToggle.setAttribute('aria-label', 'Open menu');
-  });
-});
-
-wishlistButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const saved = button.classList.toggle('saved');
-    button.textContent = saved ? 'Saved ♥' : 'Add to wish list';
   });
 });
 
